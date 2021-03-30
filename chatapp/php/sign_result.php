@@ -36,7 +36,7 @@
 
                 $sql2 = mysqli_query($con, "INSERT INTO users (unique_id, fname, lname, email, password, img, status) 
                         VALUES ({$random_id}, '{$fname}', '{$lname}', '{$email}', '{$pwd}', '{$new_img_name}','{$status}')");
-                
+                var_dump($sql2);
                 if($sql2) {
                   $sql3 = mysqli_query($con, "SELECT * FROM users WHERE email = '{$email}'");
                   if(mysqli_num_rows($sql3) > 0) {
