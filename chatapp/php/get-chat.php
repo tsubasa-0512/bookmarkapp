@@ -6,8 +6,10 @@
     $incoming_id = mysqli_real_escape_string($con, $_POST['incoming_id']);
     $output = "";
 
-    $sql = "SELECT * FROM messages WHERE (outgoing_msg_id = {$outgoing_id} AND incoming_msg_id = {$incoming_id})
-          OR (outgoing_msg_id = {$incoming_id} AND incoming_msg_id = {$outgoing_id}) ORDER BY msg_id DESC";
+    $sql = "SELECT * FROM messages 
+            LEFT JOIN users ON users.unique_id = messages.outgoing_msg_id
+            WHERE (outgoing_msg_id = {$outgoing_id} AND incoming_msg_id = {$incoming_id})
+            OR (outgoing_msg_id = {$incoming_id} AND incoming_msg_id = {$outgoing_id}) ORDER BY msg_id ASC";
     $query = mysqli_query($con, $sql);
 
     if(mysqli_num_rows($query) > 0){

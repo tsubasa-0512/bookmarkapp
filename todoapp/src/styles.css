@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background:#512DA8;
+  color: #FFFFFF;
+}
+
+.formLayout {
+  width: 450px;
+  border-radius:16px;
+  padding: 10px 25px;
+  display: flex;
+}
+
+input {
+  box-sizing: border-box;
+  width: 80%;
+  height: 27px;
+  margin: 4px 0;
+  font-size: 16px;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 0;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #FFFFFF;
+  border-left: none;
+  outline: 0;
+  transition: 0.3s;
+}
+
+button {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8rem;
+  color: #512DA8;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #512DA8 solid;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+button:hover {
+  color: #FFFFFF;
+  background: #512DA8;
+  border: 1px #FFFFFF solid;
+}
+
+li {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.unreadBooks {
+  min-height: 200px;
+  padding: 8px;
+  margin: 8px;
+  background: #D1C4E9;
+  color: #212121;
+  border-radius: 8px;
+}
+
+.readBooks {
+  min-height: 200px;
+  padding: 8px;
+  margin: 8px;
+  background: #FFFFFF;
+  color: #212121;
+  border-radius: 8px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+  color: #666;
+}
+
+.list-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+}

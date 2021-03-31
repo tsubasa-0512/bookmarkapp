@@ -12,11 +12,10 @@
       <header>
         <?php
           include_once "php/config.php";
-          $user_id = mysqli_real_escape_string($con, $_GET['user_id']);
+          $user_id = mysqli_real_escape_string($con, $_GET["user_id"]);
           $sql = mysqli_query($con, "SELECT * FROM users WHERE unique_id = {$user_id}");
           if(mysqli_num_rows($sql) > 0) {
             $row = mysqli_fetch_assoc($sql);
-          }else {
           }
         ?>
         <a href="users.php" class="back-profile"><i class="fas fa-arrow-left"></i></i></a>
