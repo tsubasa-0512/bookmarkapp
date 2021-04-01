@@ -13,6 +13,8 @@
       
       (strlen($result) > 28) ? $msg = substr($result, 0 , 28).'...' : $msg = $result;
       
+      ($row['status'] == "オフライン") ? $offline="offline": $offline="";
+      
       $output .= '<a href="chat.php?user_id='.$row['unique_id'].'">
                   <div class="content">
                   <img src="php/img/'.$row['img'].'" alt="">
@@ -21,7 +23,7 @@
                       <p>'.$msg.'</p>
                   </div>
                   </div>
-                  <div class="status"><i class="fas fa-circle"></i></div>
+                  <div class="status '.$offline.'"><i class="fas fa-circle"></i></div>
               </a>';
   }
 ?>

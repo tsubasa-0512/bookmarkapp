@@ -24,7 +24,7 @@
             <p><?php echo $row['status'] ?></p>
           </div>
         </div>
-        <a href="#" class="logout">ログアウト</a>
+        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']?>>" class="logout">ログアウト</a>
       </header>
       <div class="search">
         <span class="text">チャットするユーザーを選ぶ</span>
